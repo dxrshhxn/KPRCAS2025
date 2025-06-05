@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX</title>
+    <style>
+        .container{
+            display: flex;
+            height: 100vh;
+            flex-direction: column; /* row | column | column-reverse | row-reverse */
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            border: solid 0.1px rgba(0, 0, 0, 0);
+            padding:10px;
+        }
+        .item-1{
+            background-color: orange;
+            width: 100px;
+        }
+        .item-2{
+
+        }
+        .item-3{
+            background-color: green;
+            width: 100px;
+        }
+        img{
+            padding-top: 4px;
+        }
+    </style>
+</head>
+</body>
+<body>
+    <div class="container">
+        <div class="item item-1"></div>
+        <div class=" item-2">
+            <img src="./assets/chakra.png" width="20" alt="chakra">
+        </div>
+        <div class="item item-3"></div>
+    </div>
+    </body>
+</html>
