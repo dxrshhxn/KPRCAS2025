@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STUDENT DETAILS FORM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #cdb5f3;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-container {
+      background-color: #8e5da1;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0px 0px 400px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      color: #ffffff; /* Changed label text color */
+      font-family: 'Courier New', Courier, monospace; /* Changed font style */
+      font-size: 16px; /* Added font size */
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background-color: #f75454;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 30px black;
+    }
+
+    button:hover {
+      background-color: #aa3c3c;
+    }
+
+    .output {
+      margin-top: 20px;
+      background-color: #e9f7ef;
+      padding: 15px;
+      border-left: 5px solid #28a745;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>STUDENT DETAILS FORM</h2>
+
+  <div class="form-container">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter full name">
+
+    <label for="class">Class:</label>
+    <input type="text" id="class" placeholder="Enter class">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter email address">
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob">
+
+    <button onclick="displayDetails()">Submit</button>
+
+    <div id="output" class="output" style="display: none;"></div>
+  </div>
+
+  <script>
+    function displayDetails() {
+      const name = document.getElementById("name").value;
+      const studentClass = document.getElementById("class").value;
+      const email = document.getElementById("email").value;
+      const dob = document.getElementById("dob").value;
+
+      const outputDiv = document.getElementById("output");
+
+      if (name && studentClass && email && dob) {
+        outputDiv.innerHTML = `
+          <strong>Student Information:</strong><br>
+          Name: ${name}<br>
+          Class: ${studentClass}<br>
+          Email: ${email}<br>
+          Date of Birth: ${dob}
+        `;
+        outputDiv.style.display = "block";
+      } else {
+        alert("Please fill out all fields.");
+      }
+    }
+  </script>
+
+</body>
+</html>
